@@ -54,7 +54,7 @@ html {
 *::after {
   box-sizing: inherit;
   /* user-select: none; */
-  caret-color: transparent;
+  /* caret-color: transparent; */
 }
 
 h1,
@@ -530,6 +530,37 @@ img {
   fill: #000000;
   cursor: pointer;
   padding: 0;
+}
+
+.modal__form {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.modal__label {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.modal__input {
+  resize: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 11px 12px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal__chekbox {
+  margin-top: 300px;
+}
+
+.modal__submit {
+  position: absolute;
+  bottom: 0;
 }
 
 .section-title {
