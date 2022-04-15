@@ -533,33 +533,39 @@ img {
   padding: 0;
 }
 
+/* !Form modal hero */
+
 .modal__form {
+  position: relative;
   display: flex;
   align-items: stretch;
   flex-direction: column;
   padding: 40px;
-  position: relative;
 }
 
-.modal__container {
-  position: relative;
-  margin-bottom: 68px;
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
 }
 
-.modal__container:nth-child(5) {
-  position: relative;
+.modal__name {
+  display: block;
+  margin-top: 10px;
 }
 
 .modal__inputcontainer {
-  position: absolute;
+  position: relative;
   width: 100%;
+  margin-top: 4px;
   display: flex;
   align-items: center;
-  top: 40px;
 }
 
-.--comment {
-  display: block;
+.modal__label {
+  position: relative;
 }
 
 .modal__input {
@@ -569,20 +575,17 @@ img {
   padding: 11px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  position: absolute;
 }
 
-.modal-icon {
+.modal__icon {
   position: absolute;
-  display: none;
-}
-
-.modal__chekbox {
-  margin-top: 300px;
+  left: 12px;
+  top: 41px;
+  z-index: 1;
 }
 
 .modal__submit {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 
