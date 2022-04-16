@@ -549,19 +549,13 @@ img {
   line-height: 1.15;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 2px;
 }
 
 .modal__name {
   display: block;
   margin-top: 10px;
-}
-
-.modal__inputcontainer {
-  position: relative;
-  width: 100%;
-  margin-top: 4px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 4px;
 }
 
 .modal__label {
@@ -569,7 +563,6 @@ img {
 }
 
 .modal__input {
-  resize: none;
   display: block;
   width: 100%;
   padding: 11px 12px 12px 42px;
@@ -577,10 +570,19 @@ img {
   border-radius: 4px;
 }
 
+.modal__input.--textarea {
+  resize: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  max-height: 120px;
+}
+
 .modal__icon {
   position: absolute;
   left: 12px;
-  top: 41px;
+  top: 44px;
   z-index: 1;
 }
 
