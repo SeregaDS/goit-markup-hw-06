@@ -586,6 +586,22 @@ img {
   z-index: 1;
 }
 
+.modal__accept {
+  display: flex;
+  align-items: center;
+}
+
+.modal__offer {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+.checkbox:checked {
+  width: 30px;
+  height: 30px;
+}
+
 .modal__submit {
   /* position: absolute; */
   bottom: 0;
