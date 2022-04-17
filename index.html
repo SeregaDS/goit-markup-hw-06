@@ -69,41 +69,48 @@
           <form class="modal__form" autocomplete="off">
             <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
             <div class="modal__label">
-              <label class="modal__name">Имя</label>
-              <input class="modal__input" type="text" name="user-name" placeholder=" " />
+              <label class="modal__name" for="name">Имя</label>
+              <input class="modal__input" type="text" name="user-name" placeholder=" " id="name" />
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
             </div>
             <div class="modal__label">
-              <label class="modal__name">Телефон</label>
-              <input class="modal__input" type="tel" name="tel" placeholder=" " />
+              <label class="modal__name" for="tel">Телефон</label>
+              <input class="modal__input" type="tel" name="tel" placeholder=" " id="tel" />
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-tel"></use>
               </svg>
             </div>
             <div class="modal__label">
-              <label class="modal__name">Почта</label>
-              <input class="modal__input" type="email" name="mail" placeholder=" " />
+              <label class="modal__name" for="mail">Почта</label>
+              <input class="modal__input" type="email" name="mail" placeholder=" " id="mail" />
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
             </div>
             <div class="modal__label">
-              <label class="modal__name">Комментарий</label>
+              <label class="modal__name" for="comment">Комментарий</label>
               <textarea
                 class="modal__inputtext"
                 placeholder="Введите текст"
                 name="comment"
                 rows="7"
+                id="comment"
               ></textarea>
             </div>
             <label class="modal__accept">
+              <input
+                class="modal__checkboxhidden"
+                type="checkbox"
+                name="accept"
+                value="accept-offer" />
               <svg class="modal__checkbox" width="16" height="15">
                 <use href="./images/icons.svg#icon-checkbox"></use>
               </svg>
-              <input class="modal__checkboxhidden" type="checkbox" /><span class="modal__offer"
-                >Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span
+              <span class="modal__offer"
+                >Соглашаюсь с рассылкой и принимаю
+                <a class="modal__offerlink" href="">Условия договора</a></span
               >
               <span class="modal__checkboxchecked">
                 <svg width="16" height="15">
@@ -590,8 +597,26 @@
             </li>
           </ul>
         </div>
+        <div class="footer-flex-submit">
+          <p class="join-text">подпишитесь на рассылку</p>
+          <form class="subscribe">
+            <label class="subscribe-name" name="email">
+              <input class="subscribe-input" type="email" placeholder=" " /><span
+                class="subscribe-mail"
+                >E-mail</span
+              ></label
+            >
+            <button class="btn-subscribe" type="submit">
+              <span>Подписаться</span>
+              <svg class="subscribebtn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
