@@ -209,7 +209,6 @@ img {
 /* footer */
 
 .footer {
-  /* добавлено для корректного отображения цвета шрифта телефона и мейла в футере */
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -218,6 +217,7 @@ img {
 .footer .container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .join-text {
@@ -297,7 +297,7 @@ img {
 .subscribe-mail {
   position: absolute;
   left: 16px;
-  top: 15px;
+  top: 15px;a
   display: inline-block;
   font-size: 16px;
   line-height: 1.25;
