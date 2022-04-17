@@ -558,27 +558,31 @@ img {
   line-height: 1.15;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 2px;
+  margin-bottom: 12px;
 }
 
 .modal__name {
   display: block;
-  margin-top: 10px;
-  margin-bottom: 4px;
   color: var(--secondary-text-color);
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
+  margin-bottom: 4px;
 }
 
 .modal__label {
   position: relative;
 }
 
+.modal__label:not(:nth-child(5)) {
+  margin-bottom: 10px;
+}
+
 .modal__input {
   display: block;
   width: 100%;
-  padding: 11px 12px 12px 42px;
+  max-height: 40px;
+  padding: 11px 12px 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -588,6 +592,22 @@ img {
 }
 
 .modal__label > .modal__input:focus {
+  border: 1px solid var(--action-color);
+}
+
+.modal__input:not(:placeholder-shown) {
+  border: 1px solid var(--action-color);
+}
+
+.modal__input:not(:placeholder-shown) + .modal__icon {
+  fill: var(--action-color);
+}
+
+.modal__input:focus {
+  border: 1px solid var(--action-color);
+}
+
+.modal__inputtext:not(:placeholder-shown) {
   border: 1px solid var(--action-color);
 }
 
@@ -613,24 +633,26 @@ img {
 
 .modal__icon {
   position: absolute;
+  /* transform: translateY(100%); */
   left: 12px;
-  top: 44px;
+  bottom: 11px;
+
+  /* top: 44px; */
+  /* z-index: 100; */
+  display: block;
 }
 
 .modal__accept {
   margin-top: 20px;
   margin-bottom: 30px;
-  display: flex;
-  align-items: center;
   position: relative;
 }
 
 .modal__checkboxchecked {
   position: absolute;
   left: 12px;
+  top: 4px;
   opacity: 0;
-  width: 15px;
-  height: 16px;
   transform: scale(0.1) rotate(1turn);
 }
 
@@ -638,26 +660,26 @@ img {
   position: absolute;
   fill: currentColor;
   left: 12px;
+  top: 4px;
   opacity: 1;
-  width: 15px;
-  height: 16px;
+
   transition: opacity 250ms var(--typical-cubic);
+}
+
+.modal__accept:focus-within .modal__checkbox {
+  fill: var(--action-color);
 }
 
 .modal__checkboxhidden:checked ~ .modal__checkbox {
   position: absolute;
   left: 12px;
   opacity: 0;
-  width: 15px;
-  height: 16px;
   fill: white;
 }
 
 .modal__checkboxhidden:checked ~ .modal__checkboxchecked {
   position: absolute;
   opacity: 1;
-  width: 15px;
-  height: 16px;
 
   transform: scale(1) rotate(0deg);
   transition: opacity 250ms var(--typical-cubic), transform 250ms var(--typical-cubic);
