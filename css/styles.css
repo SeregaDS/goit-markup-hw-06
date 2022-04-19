@@ -715,36 +715,42 @@ img {
   margin-top: 20px;
   margin-bottom: 30px;
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__checkboxchecked {
   position: absolute;
-  left: 12px;
-  top: 4px;
   opacity: 0;
   transform: scale(0.1) rotate(1turn);
+  display: block;
 }
 
 .modal__checkbox {
-  position: absolute;
   fill: currentColor;
-  left: 12px;
-  top: 4px;
   opacity: 1;
+  margin-right: 7px;
 
   transition: opacity 250ms var(--typical-cubic);
 }
 
+.modal__checkbox:focus {
+  outline: 5px solid red;
+}
+
 .modal__checkboxhidden:checked ~ .modal__checkbox {
-  position: absolute;
-  left: 12px;
   opacity: 0;
   fill: white;
 }
 
 .modal__checkboxhidden:checked ~ .modal__checkboxchecked {
   position: absolute;
+  left: 0;
+  top: 4px;
   opacity: 1;
+  display: block;
 
   transform: scale(1) rotate(0deg);
   transition: opacity 250ms var(--typical-cubic), transform 250ms var(--typical-cubic);
@@ -767,7 +773,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
-  margin-left: 35px;
+  flex-grow: 1;
 }
 
 .modal__offerlink {
