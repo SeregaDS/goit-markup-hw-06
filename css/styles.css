@@ -217,7 +217,6 @@ img {
 .footer .container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 
 .join-text {
@@ -231,6 +230,10 @@ img {
 
 .footer-flex-join {
   margin-left: 70px;
+}
+
+.footer-flex-logo {
+  flex-grow: 1;
 }
 
 /* footer-social */
@@ -294,6 +297,10 @@ img {
   display: flex;
 }
 
+.subscribe-name {
+  margin-right: 12px;
+}
+
 .subscribe-mail {
   position: absolute;
   left: 16px;
@@ -314,7 +321,7 @@ img {
   border-radius: 4px;
   outline: none;
   background-color: transparent;
-  margin-right: 12px;
+
   color: rgba(255, 255, 255, 0.9);
 }
 
